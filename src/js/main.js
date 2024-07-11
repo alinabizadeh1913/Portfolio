@@ -60,8 +60,8 @@ darkMode.addEventListener('click', () => {
         document.documentElement.style.setProperty('--background','#5464de')
         document.documentElement.style.setProperty('--circle','#1f4b6df5')
         document.documentElement.style.setProperty('--links','#0e4375')
-        document.documentElement.style.setProperty('--links-hover','#59d5ff')
-
+        document.documentElement.style.setProperty('--links-hover','#59d5ff');
+        document.documentElement.style.setProperty('--text','#071a4d');
         darkModebtn.classList.remove('fa-moon')
         darkModebtn.classList.add('fa-sun')
     }else{
@@ -69,6 +69,7 @@ darkMode.addEventListener('click', () => {
         document.documentElement.style.setProperty('--circle','#1f414c')
         document.documentElement.style.setProperty('--links','#35798f')
         document.documentElement.style.setProperty('--links-hover','#abe1f3')
+        document.documentElement.style.setProperty('--text','#52dae4');
         darkModebtn.classList.remove('fa-sun')
         darkModebtn.classList.add('fa-moon')
     }

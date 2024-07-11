@@ -32,6 +32,7 @@ a{
     --circle : #1f414c;
     --links : #35798f;
     --links-hover : #abe1f3;
+    --text : #52dae4;
 }
 
 // Reboot
@@ -102,13 +103,8 @@ a{
         }
         h2{
             span{
-                background: linear-gradient(90deg,#48c1ca,#52dae4 20%, #b3faff 50%,#52dae4 85%,#48c1ca);
-                -webkit-text-fill-color: transparent;
-                background-clip: text;
-                background-size: 200% 100%;
-                background-position: 0 0;
+                color: var(--text);
                 font-weight: bold;
-                animation: moveBg 2s infinite linear;
                 @keyframes moveBg {
                     0%{
                         background-position: 0;
@@ -120,13 +116,8 @@ a{
             }
         }
         p{
-            background: linear-gradient(90deg,#48c1ca,#52dae4 20%, #b3faff 50%,#52dae4 85%,#48c1ca);
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            background-size: 200% 100%;
-            background-position: 0 0;
+            color: var(--text);
             font-weight: bold;
-            animation: moveBg 4s infinite linear;
         }
         .dots{
             top: 60%;
