@@ -61,7 +61,7 @@ darkMode.addEventListener('click', () => {
         document.documentElement.style.setProperty('--circle','#1f4b6df5')
         document.documentElement.style.setProperty('--links','#0e4375')
         document.documentElement.style.setProperty('--links-hover','#59d5ff');
-        document.documentElement.style.setProperty('--text','#071a4d');
+        document.documentElement.style.setProperty('--text','#b0b9ff');
         darkModebtn.classList.remove('fa-moon')
         darkModebtn.classList.add('fa-sun')
     }else{

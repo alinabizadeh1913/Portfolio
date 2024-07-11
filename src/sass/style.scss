@@ -73,22 +73,22 @@ a{
         right: 0;
         width: 100%;
         .circle-blur{
-            width: 770px;
+            width: 1000px;
             height: 700px;
             border-radius: 100%;
-            filter: blur(60px);
+            filter: blur(100px);
             background-color: var(--circle);
             transition: 0.313s ease;
             animation: circle 5s linear infinite;
             @keyframes circle {
                 0%{
-                    filter: blur(60px);
+                    filter: blur(100px);
                 }
                 50%{
-                    filter: blur(90px);
+                    filter: blur(130px);
                 }
                 100%{
-                    filter: blur(60px);
+                    filter: blur(100px);
                 }
             }
         }
