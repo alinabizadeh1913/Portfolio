@@ -1,5 +1,13 @@
 // Reboot
 
+@media screen and (min-width: 1850px) {
+    #header{
+        .content{
+            margin: 100px 0 !important;
+        }
+    }
+}
+
 html{
     scroll-behavior: smooth;
 }
@@ -11,6 +19,15 @@ body{
 
 a{
     text-decoration: none;
+}
+
+::-webkit-scrollbar{
+    width: 0.6vw;
+    background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #142a36;
 }
 
 @font-face {
@@ -33,6 +50,7 @@ a{
     --links : #35798f;
     --links-hover : #abe1f3;
     --text : #52dae4;
+    --border-line : #bee8fc30;
 }
 
 // Reboot
@@ -76,19 +94,19 @@ a{
             width: 1000px;
             height: 700px;
             border-radius: 100%;
-            filter: blur(100px);
+            filter: blur(200px);
             background-color: var(--circle);
             transition: 0.313s ease;
-            animation: circle 5s linear infinite;
+            animation: circle 7s linear infinite;
             @keyframes circle {
                 0%{
-                    filter: blur(100px);
+                    filter: blur(200px);
                 }
                 50%{
-                    filter: blur(130px);
+                    filter: blur(140px);
                 }
                 100%{
-                    filter: blur(100px);
+                    filter: blur(200px);
                 }
             }
         }
@@ -98,6 +116,7 @@ a{
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin: 19vh auto;
         h1,h2{
             color: white;
         }
@@ -105,19 +124,15 @@ a{
             span{
                 color: var(--text);
                 font-weight: bold;
-                @keyframes moveBg {
-                    0%{
-                        background-position: 0;
-                    }
-                    100%{
-                        background-position: 400%;
-                    }
-                }
+                text-decoration: underline;
+                transition: color 0.313s ease;
             }
         }
         p{
             color: var(--text);
             font-weight: bold;
+            text-decoration: underline;
+            transition: color 0.313s ease;
         }
         .dots{
             top: 60%;
@@ -230,19 +245,27 @@ a{
         }
     }
     .contact{
-        margin:auto;
+        margin: auto;
         background-color: #0e1516b5;
         border-radius: 10px;
-        padding: 100px 15px;
+        padding: 115px 0;
         backdrop-filter: blur(5px);
         display: none;
         visibility: hidden;
         opacity: 0;
         transition: 0.313s ease;
+        overflow: hidden;
         a{
-            font-size: 18px;
-            margin: 10px 0;
+            width: 100%;
+            text-align: center;
             color: white;
+            padding: 15px 40px;
+            transition: 0.413s ease 0.3s;
+            cursor: default;
+            &:hover{
+                background-color: #ffffff;
+                color: #25221a;
+            }
             i{
                 margin: 0 5px;
             }
@@ -253,3 +276,79 @@ a{
 .contact-me::-webkit-scrollbar{
     display: none;
 }
+
+
+// Full Line Styles
+
+.full-line{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    z-index: -1;
+    .line{
+        border-right: 1px solid var(--border-line);
+        width: 10%;
+        transition: 0.313s ease;
+    }
+    .line:last-child{
+        border-right: unset !important;
+    }
+}
+
+// Full Line Styles
+
+
+// Gear Styles
+
+.gear{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    backdrop-filter: blur(10px);
+    background-color: #151515cf;
+    transition: visibility 0.5313s ease, opacity 0.5313s ease;
+    i:first-child{
+        font-size: 150px;
+        color: #3c4546e2;
+        animation: rotate1 3.9s infinite linear;
+    }
+    i:last-child{
+        font-size: 100px;
+        color: #3c4546e2;
+        position: relative;
+        left: -5px;
+        top: 10px;
+        animation: rotate2 4s infinite linear;
+    }
+    @keyframes rotate1{
+        from{
+            transform: rotate(0deg);
+        }
+        to{
+            transform: rotate(360deg);
+        }
+    }
+    @keyframes rotate2{
+        from{
+            transform: rotate(0deg);
+        }
+        to{
+            transform: rotate(-360deg);
+        }
+    }
+}
+
+// Gear Styles
